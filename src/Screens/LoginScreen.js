@@ -30,15 +30,16 @@ export default function LoginScreen({ navigation }) {
     );
 
     if (credential.email.length === 0) {
-      Toast.show({
-        text: "Email is empty",
-        position: "bottom",
-        type: "danger",
-        duration: 2000,
-      });
+      alert('Email entry is empty')
+      // Toast.show({
+      //   text: "Email is empty",
+      //   position: "bottom",
+      //   type: "danger",
+      //   duration: 2000,
+      // });
     } else if (!reg.test(credential.email)) {
       Toast.show({
-        text: "Invalid Email",
+        text: "Incorrect email format",
         position: "bottom",
         type: "danger",
         duration: 2000,

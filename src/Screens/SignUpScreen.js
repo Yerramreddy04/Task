@@ -44,14 +44,14 @@ export default function SignUpScreen({ navigation }) {
 
     if (credential.firstName.length === 0) {
       Toast.show({
-        text: "Email is empty",
+        text: "FirsName is empty",
         position: "bottom",
         type: "danger",
         duration: 2000,
       });
     } else if (credential.lastName.length === 0) {
       Toast.show({
-        text: "Email is empty",
+        text: "LastName is empty",
         position: "bottom",
         type: "danger",
         duration: 2000,

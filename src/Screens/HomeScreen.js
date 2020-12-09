@@ -1,6 +1,8 @@
+import { Image, Thumbnail } from "native-base";
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import ButtonWithTxt from "../CommonUtils/ButtonWithTxt";
+import BackGroundImg from "../../bitsPilani.jpeg"
 
 export default function HomeScreen({ navigation }) {
   const handleLogout = () => {
@@ -9,7 +11,10 @@ export default function HomeScreen({ navigation }) {
   };
   return (
     <View style={styles.container1}>
-      <Text style={styles.textStyle}>Home screen</Text>
+      <Text style={styles.textStyle}>Welcome</Text>
+      <Text style={styles.textStyle}>Siva Jyothi</Text>
+        <Thumbnail source={BackGroundImg} style={{height:300,width:300,marginTop:"20%"}} />
+        <Text style={styles.textStyle1}>M-Tech programme 2019-2021</Text>
       <ButtonWithTxt
         text="Logout"
         press={handleLogout}
@@ -31,6 +36,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   textStyle: {
+    fontWeight: "bold",
+    fontSize: 40,
+  },
+  textStyle1: {
     fontWeight: "bold",
     fontSize: 20,
   },
